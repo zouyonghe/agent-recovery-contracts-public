@@ -46,6 +46,7 @@ Selected results are deterministic controls, not LLM performance measurements. F
 - [Development guide](docs/development.md)
 - [Tool contracts and safety boundaries](docs/contracts.md)
 - [Experiment methodology](docs/experiments.md)
+- [Applying ReplayFence to existing agents](docs/agent-integration.md)
 - [Contributing](CONTRIBUTING.md)
 
 ## License
