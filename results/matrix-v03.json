@@ -1,0 +1,1796 @@
+{
+  "protocol": "recovery-matrix-v0.3-durable-receipts",
+  "policyType": "deterministic_controls_not_llm",
+  "episodes": [
+    {
+      "index": 0,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 1,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 2,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 3,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "retry",
+        "reason": "inside_contract_window"
+      },
+      "queries": 2,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 4,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 5,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 6,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 7,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "retry",
+        "reason": "inside_contract_window"
+      },
+      "queries": 2,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 8,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 9,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 10,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 11,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 12,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 13,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 14,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 15,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 16,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 17,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 18,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 19,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 20,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 21,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 22,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 23,
+      "kind": "ticket",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 24,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 25,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 26,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 27,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 28,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 29,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 30,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 31,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 32,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 33,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 34,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 35,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 36,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 37,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 38,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 39,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 40,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 41,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 42,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 43,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 44,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 45,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 46,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 47,
+      "kind": "ticket",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 48,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 49,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 50,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 51,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "retry",
+        "reason": "inside_contract_window"
+      },
+      "queries": 2,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 52,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 53,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 54,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 55,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "retry",
+        "reason": "inside_contract_window"
+      },
+      "queries": 2,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 56,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 57,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 58,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 59,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 60,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 61,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 62,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 63,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 64,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 65,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 66,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 67,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 68,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 69,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 70,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 71,
+      "kind": "notification",
+      "fault": "before_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "reconcile",
+        "reason": "outside_contract_window"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 0,
+      "exactlyOne": false,
+      "completed": false,
+      "falseSuccess": false
+    },
+    {
+      "index": 72,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 73,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 74,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 75,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 76,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 77,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 78,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 79,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 1,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 80,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 81,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 82,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 83,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 1,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 84,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 85,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 86,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 87,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 4,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 88,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 89,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 90,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 91,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 0,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    },
+    {
+      "index": 92,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "naive",
+      "decision": {
+        "action": "retry",
+        "reason": "blind_retry"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 93,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "stable_key",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 0,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 94,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "verify_before_retry",
+      "decision": {
+        "action": "retry",
+        "reason": "unknown_treated_as_absent"
+      },
+      "queries": 1,
+      "retries": 1,
+      "effects": 2,
+      "exactlyOne": false,
+      "completed": true,
+      "falseSuccess": true
+    },
+    {
+      "index": 95,
+      "kind": "notification",
+      "fault": "after_commit",
+      "resumeTick": 6,
+      "visibilityDelay": 10,
+      "policy": "contract_aware",
+      "decision": {
+        "action": "complete",
+        "id": 1,
+        "reason": "matching_receipt"
+      },
+      "queries": 2,
+      "retries": 0,
+      "effects": 1,
+      "exactlyOne": true,
+      "completed": true,
+      "falseSuccess": false
+    }
+  ],
+  "summary": {
+    "naive": {
+      "episodes": 24,
+      "duplicates": 12,
+      "missed": 0,
+      "exactlyOne": 12,
+      "completed": 24,
+      "unresolved": 0,
+      "falseSuccess": 12,
+      "queries": 0,
+      "retries": 24
+    },
+    "stable_key": {
+      "episodes": 24,
+      "duplicates": 4,
+      "missed": 0,
+      "exactlyOne": 20,
+      "completed": 24,
+      "unresolved": 0,
+      "falseSuccess": 4,
+      "queries": 0,
+      "retries": 24
+    },
+    "verify_before_retry": {
+      "episodes": 24,
+      "duplicates": 4,
+      "missed": 0,
+      "exactlyOne": 20,
+      "completed": 24,
+      "unresolved": 0,
+      "falseSuccess": 4,
+      "queries": 24,
+      "retries": 20
+    },
+    "contract_aware": {
+      "episodes": 24,
+      "duplicates": 0,
+      "missed": 8,
+      "exactlyOne": 16,
+      "completed": 16,
+      "unresolved": 8,
+      "falseSuccess": 0,
+      "queries": 44,
+      "retries": 4
+    }
+  }
+}
