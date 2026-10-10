@@ -1,4 +1,4 @@
-# Contracts and safety boundaries
+# ReplayFence contracts and safety boundaries
 
 ## Operation identity
 

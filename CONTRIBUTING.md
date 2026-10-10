@@ -1,4 +1,4 @@
-# Contributing
+# Contributing to ReplayFence
 
 Run `npm test` before submitting a change. Include a regression test for new behavior and keep protocol documentation aligned with implementation.
 

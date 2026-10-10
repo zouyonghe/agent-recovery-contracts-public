@@ -1,4 +1,4 @@
-# Development
+# ReplayFence development guide
 
 Node.js 24+ and its standard library are the only requirements. Run `npm test` for the complete suite. Tests create isolated temporary ledgers and close their HTTP services and child processes.
 

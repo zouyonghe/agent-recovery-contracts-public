@@ -1,6 +1,8 @@
-# Agent Recovery Contracts
+# ReplayFence
 
-Reproducible experiments for recovering interrupted agent tool calls without confusing a missing response with a missing side effect.
+Recover interrupted agent tool calls without mistaking a missing response for a missing side effect.
+
+ReplayFence is a reproducible research toolkit for studying safe retries and recovery boundaries.
 
 Use this project to explore idempotency expiration, durable receipts, late requests, and server-side fencing. It provides a local HTTP fixture, deterministic recovery policies, persistent operation journals, fault injection, and effect-count checks.
 
